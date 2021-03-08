@@ -1,0 +1,10 @@
+<p>{{ jobs }}</p>
+
+{% for job in jobs %}
+    <h4>Job #{{ forloop.counter }}</h4>
+    {% for detail in job %}
+        {% if forloop.counter != 1 %}
+            <li>{{ detail }}</li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
